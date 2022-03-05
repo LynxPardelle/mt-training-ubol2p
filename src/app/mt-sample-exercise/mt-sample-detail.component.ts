@@ -1,18 +1,16 @@
-import { Component } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
-import { SelectedFarmService } from './selected-farm.service';
-import { takeUntil } from 'rxjs/operators';
-import { Farm } from './farm';
-import { EditService, ToolbarService, SortService } from '@syncfusion/ej2-angular-grids';
+import { Component, Input } from '@angular/core';
+
+/* Services */
+import { SelectedFarmService } from '../services/selected-farm.service';
+
+/* Models */
+import { Farm } from '../models/farm';
 
 @Component({
   selector: 'mt-sample-detail',
   templateUrl: './mt-sample-detail.component.html',
 })
 export class MtSampleDetailComponent {
-
-  constructor() {
-  }
-
-  
+  @Input() farm: Farm;
+  constructor() {}
 }

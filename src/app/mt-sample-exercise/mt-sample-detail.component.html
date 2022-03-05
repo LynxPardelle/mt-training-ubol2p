@@ -1,1 +1,23 @@
-<h5 >Farm Selected</h5>
+<h5>Farm Selected</h5>
+
+<div *ngIf="farm">
+  <p *ngIf="farm.Id && farm.Id !== 0">
+    {{ 'Id: ' + farm.Id }}
+  </p>
+
+  <p *ngIf="farm.FarmNo && farm.FarmNo !== ''">
+    {{ 'FarmNo: ' + farm.FarmNo }}
+  </p>
+
+  <p *ngIf="farm.FarmName && farm.FarmName !== ''">
+    {{ 'FarmName: ' + farm.FarmName }}
+  </p>
+
+  <p *ngIf="farm.ActiveDate && farm.ActiveDate !== ''">
+    {{ 'ActiveDate: ' + farm.ActiveDate }}
+  </p>
+
+  <p *ngIf="farm.Address && farm.Address !== ''">
+    {{ 'Address: ' + farm.Address }}
+  </p>
+</div>
